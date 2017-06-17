@@ -322,7 +322,7 @@ create table rp_account_check_batch
    version              int unsigned not null,
    create_time          datetime not null,
    editor               varchar(100) comment '修改者',
-   creater              varchar(100) comment '创建者',
+   creator              varchar(100) comment '创建者',
    edit_time            datetime comment '最后修改时间',
    status               varchar(30) not null,
    remark               varchar(500),
@@ -356,7 +356,7 @@ create table rp_account_check_mistake
    version              int unsigned not null,
    create_time          datetime not null,
    editor               varchar(100) comment '修改者',
-   creater              varchar(100) comment '创建者',
+   creator              varchar(100) comment '创建者',
    edit_time            datetime comment '最后修改时间',
    status               varchar(30),
    remark               varchar(500),
@@ -397,7 +397,7 @@ create table rp_account_check_mistake_scratch_pool
    version              int unsigned not null,
    create_time          datetime not null,
    editor               varchar(100) comment '修改者',
-   creater              varchar(100) comment '创建者',
+   creator              varchar(100) comment '创建者',
    edit_time            datetime comment '最后修改时间',
    product_name         varchar(50) comment '商品名称',
    merchant_order_no    varchar(30) not null comment '商户订单号',
@@ -430,7 +430,7 @@ create table rp_notify_record
    version              int not null,
    create_time          datetime not null,
    editor               varchar(100) comment '修改者',
-   creater              varchar(100) comment '创建者',
+   creator              varchar(100) comment '创建者',
    edit_time            datetime comment '最后修改时间',
    notify_times         int not null,
    limit_notify_times   int not null,
@@ -450,7 +450,7 @@ create table rp_notify_record_log
    id                   varchar(50) not null,
    version              int not null,
    editor               varchar(100) comment '修改者',
-   creater              varchar(100) comment '创建者',
+   creator              varchar(100) comment '创建者',
    edit_time            datetime comment '最后修改时间',
    create_time          datetime not null,
    notify_id            varchar(50) not null,
@@ -470,7 +470,7 @@ create table rp_refund_record
    version              int not null comment '版本号',
    create_time          datetime comment '创建时间',
    editor               varchar(100) comment '修改者',
-   creater              varchar(100) comment '创建者',
+   creator              varchar(100) comment '创建者',
    edit_time            datetime comment '最后修改时间',
    org_merchant_order_no varchar(50) comment '原商户订单号',
    org_trx_no           varchar(50) comment '原支付流水号',
@@ -509,7 +509,7 @@ create table rp_trade_payment_order
    version              int not null default 0 comment '版本号',
    create_time          datetime not null comment '创建时间',
    editor               varchar(100) comment '修改者',
-   creater              varchar(100) comment '创建者',
+   creator              varchar(100) comment '创建者',
    edit_time            datetime comment '最后修改时间',
    status               varchar(50) comment '状态(参考枚举:orderstatusenum)',
    product_name         varchar(300) comment '商品名称',
@@ -556,7 +556,7 @@ create table rp_trade_payment_record
    create_time          datetime comment '创建时间',
    status               varchar(30) comment '状态(参考枚举:paymentrecordstatusenum)',
    editor               varchar(100) comment '修改者',
-   creater              varchar(100) comment '创建者',
+   creator              varchar(100) comment '创建者',
    edit_time            datetime comment '最后修改时间',
    product_name         varchar(50) comment '商品名称',
    merchant_order_no    varchar(50) not null comment '商户订单号',
@@ -691,7 +691,7 @@ create table pms_menu
 (
    id                   bigint not null auto_increment,
    version              bigint not null,
-   creater              varchar(50) not null comment '创建人',
+   creator              varchar(50) not null comment '创建人',
    create_time          datetime not null comment '创建时间',
    editor               varchar(50) comment '修改人',
    edit_time            datetime comment '修改时间',
@@ -716,7 +716,7 @@ create table pms_menu_role
 (
    id                   bigint not null auto_increment comment '主键',
    version              bigint,
-   creater              varchar(50) comment '创建人',
+   creator              varchar(50) comment '创建人',
    create_time          datetime comment '创建时间',
    editor               varchar(50) comment '修改人',
    edit_time            datetime comment '修改时间',
@@ -734,7 +734,7 @@ create table pms_operator
 (
    id                   bigint not null auto_increment comment '主键',
    version              bigint not null,
-   creater              varchar(50) not null comment '创建人',
+   creator              varchar(50) not null comment '创建人',
    create_time          datetime not null comment '创建时间',
    editor               varchar(50) comment '修改人',
    edit_time            datetime comment '修改时间',
@@ -756,7 +756,7 @@ create table pms_operator_log
 (
    id                   bigint not null auto_increment comment '主键',
    version              bigint not null,
-   creater              varchar(50) not null comment '创建人',
+   creator              varchar(50) not null comment '创建人',
    create_time          datetime not null comment '创建时间',
    editor               varchar(50) comment '修改人',
    edit_time            datetime comment '修改时间',
@@ -776,7 +776,7 @@ create table pms_permission
 (
    id                   bigint not null auto_increment comment '主键',
    version              bigint not null,
-   creater              varchar(50) not null comment '创建人',
+   creator              varchar(50) not null comment '创建人',
    create_time          datetime not null comment '创建时间',
    editor               varchar(50) comment '修改人',
    edit_time            datetime comment '修改时间',
@@ -795,7 +795,7 @@ create table pms_role
 (
    id                   bigint not null auto_increment comment '主键',
    version              bigint,
-   creater              varchar(50) comment '创建人',
+   creator              varchar(50) comment '创建人',
    create_time          datetime comment '创建时间',
    editor               varchar(50) comment '修改人',
    edit_time            datetime comment '修改时间',
@@ -813,7 +813,7 @@ create table pms_role_operator
 (
    id                   bigint not null auto_increment comment '主键',
    version              bigint not null,
-   creater              varchar(50) not null comment '创建人',
+   creator              varchar(50) not null comment '创建人',
    create_time          datetime not null comment '创建时间',
    editor               varchar(50) comment '修改人',
    edit_time            datetime comment '修改时间',
@@ -831,7 +831,7 @@ create table pms_role_permission
 (
    id                   bigint not null auto_increment comment '主键',
    version              bigint,
-   creater              varchar(50) comment '创建人',
+   creator              varchar(50) comment '创建人',
    create_time          datetime comment '创建时间',
    editor               varchar(50) comment '修改人',
    edit_time            datetime comment '修改时间',
@@ -852,7 +852,7 @@ alter table pms_role_permission comment '权限与角色关联表';
 -- ------------------------------step 1  菜单-------------------------------------------------
 -- 菜单初始化数据
 --  -- 菜单的初始化数据
-insert into pms_menu (id,version,status,creater,create_time, editor, edit_time, remark, name, url, number, is_leaf, level, parent_id, target_name) values 
+insert into pms_menu (id,version,status,creator,create_time, editor, edit_time, remark, name, url, number, is_leaf, level, parent_id, target_name) values
 (1,0, 'ACTIVE','roncoo','2016-06-03 11:07:43', 'admin','2016-06-03 11:07:43', '', '权限管理', '##', '001', 'NO', 1, 0, '#'),
 (2,0, 'ACTIVE','roncoo','2016-06-03 11:07:43', 'admin','2016-06-03 11:07:43', '', '菜单管理', 'pms/menu/list', '00101', 'YES', 2, 1, 'cdgl'),
 (3,0, 'ACTIVE','roncoo','2016-06-03 11:07:43', 'admin','2016-06-03 11:07:43', '', '权限管理', 'pms/permission/list', '00102', 'YES',2, 1, 'qxgl'),
@@ -887,7 +887,7 @@ insert into pms_menu (id,version,status,creater,create_time, editor, edit_time, 
 -- 权限功能点的初始化数据
 
 
-insert into pms_permission (id,version,status,creater,create_time, editor, edit_time, remark, permission_name, permission) values 
+insert into pms_permission (id,version,status,creator,create_time, editor, edit_time, remark, permission_name, permission) values
  (1, 0,'ACTIVE', 'roncoo','2016-06-03 11:07:43', 'test', '2016-06-03 11:07:43','权限管理-菜单-查看','权限管理-菜单-查看','pms:menu:view'),
  (2, 0,'ACTIVE', 'roncoo','2016-06-03 11:07:43', 'test', '2016-06-03 11:07:43','权限管理-菜单-添加','权限管理-菜单-添加','pms:menu:add'),
  (3, 0,'ACTIVE', 'roncoo','2016-06-03 11:07:43', 'test', '2016-06-03 11:07:43','权限管理-菜单-查看','权限管理-菜单-修改','pms:menu:edit'),
@@ -971,30 +971,30 @@ insert into pms_permission (id,version,status,creater,create_time, editor, edit_
 -- -----------------------------------step3：操作员--------------------------------------------
 -- -- 操作员的初始化数据
 --  admin 超级管理员
-insert into pms_operator (id,version,status,creater,create_time, editor, edit_time, remark, login_name, login_pwd,real_name,mobile_no,type,salt) 
+insert into pms_operator (id,version,status,creator,create_time, editor, edit_time, remark, login_name, login_pwd,real_name,mobile_no,type,salt)
 values (1, 0, 'ACTIVE','roncoo','2016-06-03 11:07:43', 'admin','2016-06-03 11:07:43', '超级管理员', 'admin', 'd3c59d25033dbf980d29554025c23a75','超级管理员', '18620936193', 'ADMIN','8d78869f470951332959580424d4bf4f');
 
 --  guest  游客
-insert into pms_operator (id,version,status,creater,create_time, editor, edit_time, remark, login_name, login_pwd,real_name,mobile_no,type,salt) 
+insert into pms_operator (id,version,status,creator,create_time, editor, edit_time, remark, login_name, login_pwd,real_name,mobile_no,type,salt)
 values (2, 0, 'ACTIVE','roncoo','2016-06-03 11:07:43', 'guest','2016-06-03 11:07:43', '游客', 'guest', '3f0dbf580ee39ec03b632cb33935a363','游客', '18926215592', 'USER','183d9f2f0f2ce760e98427a5603d1c73');
 
 -- ------------------------------------step4：角色-------------------------------------------
 -- -- 角色的初始化数据
-insert into pms_role (id,version,status,creater,create_time, editor, edit_time, remark, role_code, role_name) 
+insert into pms_role (id,version,status,creator,create_time, editor, edit_time, remark, role_code, role_name)
 values (1, 0,'ACTIVE', 'roncoo','2016-06-03 11:07:43', 'admin', '2016-06-03 11:07:43','超级管理员角色','admin', '超级管理员角色');
 
-insert into pms_role (id,version,status,creater,create_time, editor, edit_time, remark, role_code, role_name) 
+insert into pms_role (id,version,status,creator,create_time, editor, edit_time, remark, role_code, role_name)
 values (2, 0,'ACTIVE', 'roncoo','2016-06-03 11:07:43', 'guest', '2016-06-03 11:07:43','游客角色','guest', '游客角色');
 
 -- ------------------------------------step5：操作员和角色关联-------------------------------------------
 -- -- 操作员与角色关联的初始化数据
 
 --  admin  关联admin 和test两个角色
-insert into pms_role_operator (id,version,status,creater,create_time, editor, edit_time, remark,role_id,operator_id) values (1, 0,'ACTIVE', 'roncoo','2016-06-03 11:07:43', 'test', '2016-06-03 11:07:43','',1,1);
-insert into pms_role_operator (id,version,status,creater,create_time, editor, edit_time, remark,role_id,operator_id) values (2, 0,'ACTIVE', 'roncoo','2016-06-03 11:07:43', 'test', '2016-06-03 11:07:43','',2,1);
+insert into pms_role_operator (id,version,status,creator,create_time, editor, edit_time, remark,role_id,operator_id) values (1, 0,'ACTIVE', 'roncoo','2016-06-03 11:07:43', 'test', '2016-06-03 11:07:43','',1,1);
+insert into pms_role_operator (id,version,status,creator,create_time, editor, edit_time, remark,role_id,operator_id) values (2, 0,'ACTIVE', 'roncoo','2016-06-03 11:07:43', 'test', '2016-06-03 11:07:43','',2,1);
 
 -- guest  关联游客角色  （游客角色只有查看交易记录的信息）
-insert into pms_role_operator (id,version,status,creater,create_time, editor, edit_time, remark,role_id,operator_id) values (3, 0,'ACTIVE', 'roncoo','2016-06-03 11:07:43', 'test', '2016-06-03 11:07:43','',2,2);
+insert into pms_role_operator (id,version,status,creator,create_time, editor, edit_time, remark,role_id,operator_id) values (3, 0,'ACTIVE', 'roncoo','2016-06-03 11:07:43', 'test', '2016-06-03 11:07:43','',2,2);
 
 -- -------------------------------------step6：角色和权限关联------------------------------------------
 -- -- 角色与用户功能点关联的初始化数据
@@ -1004,7 +1004,7 @@ insert into pms_role_permission  (role_id, permission_id) select 1,id from PMS_P
 
 
 -- guest （只有所有的查看权限）
-insert into pms_role_permission (version,status,creater,create_time, editor, edit_time, remark,role_id,permission_id) 
+insert into pms_role_permission (version,status,creator,create_time, editor, edit_time, remark,role_id,permission_id)
 values 
  ( 0,'ACTIVE', 'roncoo','2016-06-03 11:07:43', 'test', '2016-06-03 11:07:43','',2,1),
  ( 0,'ACTIVE', 'roncoo','2016-06-03 11:07:43', 'test', '2016-06-03 11:07:43','',2,11),
