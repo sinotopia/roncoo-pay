@@ -22,8 +22,8 @@ import com.sinotopia.pay.common.core.utils.StringUtil;
 /**
  * 基类.
  *
- * @author Along
- * @company：广州领课网络科技有限公司（龙果学院 www.sinotopia.com）.
+ * @author sinotopia
+ * @company： www.sinotopia.com
  */
 public class BaseEntity {
 
@@ -48,14 +48,17 @@ public class BaseEntity {
      * 创建时间
      */
     private Date createTime = new Date();
+
     /**
      * 修改人
      */
     private String editor;
+
     /**
      * 修改时间
      */
     private Date editTime;
+
     /**
      * 描述
      */

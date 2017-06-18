@@ -19,7 +19,7 @@ package com.sinotopia.pay.common.core.exception;
  * 业务异常基类，所有业务异常都必须继承于此异常 .
  *
  * @author along
- * @company：广州领课网络科技有限公司（龙果学院 www.roncoo.com）.
+ * @company：广州领课网络科技有限公司（龙果学院 www.sinotopia.com）.
  */
 public class BizException extends RuntimeException {
 

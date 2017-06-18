@@ -13,9 +13,8 @@ import com.sinotopia.pay.notify.enums.NotifyTypeEnum;
  * @公司名称:广州市领课网络科技有限公司 龙果学院(www.roncoo.com)
  * @版本:V1.0
  */
-public class RpNotifyRecord  extends BaseEntity {
+public class RpNotifyRecord extends BaseEntity {
 
-    
 
 //    private Long notifyId;
 //
@@ -25,25 +24,39 @@ public class RpNotifyRecord  extends BaseEntity {
 
     private Date createTime;
 
-    /** 最后一次通知时间 **/
+    /**
+     * 最后一次通知时间
+     **/
     private Date lastNotifyTime;
 
-    /** 通知次数 **/
+    /**
+     * 通知次数
+     **/
     private Integer notifyTimes = 0;
 
-    /** 限制通知次数 **/
+    /**
+     * 限制通知次数
+     **/
     private Integer limitNotifyTimes = 5;
 
-    /** 通知URL **/
+    /**
+     * 通知URL
+     **/
     private String url;
 
-    /** 商户编号 **/
+    /**
+     * 商户编号
+     **/
     private String merchantNo;
 
-    /** 商户订单号 **/
+    /**
+     * 商户订单号
+     **/
     private String merchantOrderNo;
 
-    /** 通知类型 NotifyTypeEnum **/
+    /**
+     * 通知类型 NotifyTypeEnum
+     **/
     private String notifyType;
 
     public RpNotifyRecord() {
@@ -65,22 +78,30 @@ public class RpNotifyRecord  extends BaseEntity {
     }
 
 
-    /** 最后一次通知时间 **/
+    /**
+     * 最后一次通知时间
+     **/
     public Date getLastNotifyTime() {
         return lastNotifyTime;
     }
 
-    /** 最后一次通知时间 **/
+    /**
+     * 最后一次通知时间
+     **/
     public void setLastNotifyTime(Date lastNotifyTime) {
         this.lastNotifyTime = lastNotifyTime;
     }
 
-    /** 通知次数 **/
+    /**
+     * 通知次数
+     **/
     public Integer getNotifyTimes() {
         return notifyTimes;
     }
 
-    /** 通知次数 **/
+    /**
+     * 通知次数
+     **/
     public void setNotifyTimes(Integer notifyTimes) {
         this.notifyTimes = notifyTimes;
     }
@@ -93,42 +114,58 @@ public class RpNotifyRecord  extends BaseEntity {
         this.createTime = createTime;
     }
 
-    /** 限制通知次数 **/
+    /**
+     * 限制通知次数
+     **/
     public Integer getLimitNotifyTimes() {
         return limitNotifyTimes;
     }
 
-    /** 限制通知次数 **/
+    /**
+     * 限制通知次数
+     **/
     public void setLimitNotifyTimes(Integer limitNotifyTimes) {
         this.limitNotifyTimes = limitNotifyTimes;
     }
 
-    /** 通知URL **/
+    /**
+     * 通知URL
+     **/
     public String getUrl() {
         return url;
     }
 
-    /** 通知URL **/
+    /**
+     * 通知URL
+     **/
     public void setUrl(String url) {
         this.url = url == null ? null : url.trim();
     }
 
-    /** 商户编号 **/
+    /**
+     * 商户编号
+     **/
     public String getMerchantNo() {
         return merchantNo;
     }
 
-    /** 商户编号 **/
+    /**
+     * 商户编号
+     **/
     public void setMerchantNo(String merchantNo) {
         this.merchantNo = merchantNo == null ? null : merchantNo.trim();
     }
 
-    /** 商户订单号 **/
+    /**
+     * 商户订单号
+     **/
     public String getMerchantOrderNo() {
         return merchantOrderNo;
     }
 
-    /** 商户订单号 **/
+    /**
+     * 商户订单号
+     **/
     public void setMerchantOrderNo(String merchantOrderNo) {
         this.merchantOrderNo = merchantOrderNo == null ? null : merchantOrderNo.trim();
     }

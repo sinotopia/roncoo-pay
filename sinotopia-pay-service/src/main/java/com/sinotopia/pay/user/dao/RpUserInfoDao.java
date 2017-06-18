@@ -22,7 +22,7 @@ import com.sinotopia.pay.user.entity.RpUserInfo;
  * 用户dao
  * 龙果学院：www.sinotopia.com
  *
- * @author：zenghao
+ * @author：sinotopia
  */
 public interface RpUserInfoDao extends BaseDao<RpUserInfo> {
 }

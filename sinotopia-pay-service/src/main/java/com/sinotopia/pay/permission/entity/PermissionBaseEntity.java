@@ -1,5 +1,5 @@
 /*
- * Copyright 2015-2102 RonCoo(http://www.roncoo.com) Group.
+ * Copyright 2015-2102 RonCoo(http://www.sinotopia.com) Group.
  *  
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,85 +20,117 @@ import java.util.Date;
 
 /**
  * 权限基类
+ * <p>
+ * www.sinotopia.com
  *
- * 龙果学院：www.roncoo.com
- * 
- * @author：shenjialong
+ * @author：sinotopia
  */
 public class PermissionBaseEntity implements Serializable {
 
-	private static final long serialVersionUID = -1164227376672815589L;
-	private Long id;// 主键ID.
-	private Integer version = 0;// 版本号默认为0
-	private String status;// 状态 PublicStatusEnum
-	private String creater;// 创建人.
-	private Date createTime = new Date();// 创建时间.
-	private String editor;// 修改人.
-	private Date editTime;// 修改时间.
-	private String remark;// 描述
+    private static final long serialVersionUID = -1164227376672815589L;
 
-	public Long getId() {
-		return id;
-	}
+    /**
+     * 主键ID
+     */
+    private Long id;
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+    /**
+     * 版本号默认为0
+     */
+    private Integer version = 0;
 
-	public Integer getVersion() {
-		return version;
-	}
+    /**
+     * 状态 PublicStatusEnum
+     */
+    private String status;
 
-	public void setVersion(Integer version) {
-		this.version = version;
-	}
+    /**
+     * 创建人
+     */
+    private String creator;
 
-	public String getStatus() {
-		return status;
-	}
+    /**
+     * 创建时间
+     */
+    private Date createTime = new Date();
 
-	public void setStatus(String status) {
-		this.status = status;
-	}
+    /**
+     * 修改人
+     */
+    private String editor;
 
-	public String getCreater() {
-		return creater;
-	}
+    /**
+     * 修改时间
+     */
+    private Date editTime;
 
-	public void setCreater(String creater) {
-		this.creater = creater;
-	}
+    /**
+     * 描述
+     */
+    private String remark;
 
-	public Date getCreateTime() {
-		return createTime;
-	}
+    public Long getId() {
+        return id;
+    }
 
-	public void setCreateTime(Date createTime) {
-		this.createTime = createTime;
-	}
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-	public String getEditor() {
-		return editor;
-	}
+    public Integer getVersion() {
+        return version;
+    }
 
-	public void setEditor(String editor) {
-		this.editor = editor;
-	}
+    public void setVersion(Integer version) {
+        this.version = version;
+    }
 
-	public Date getEditTime() {
-		return editTime;
-	}
+    public String getStatus() {
+        return status;
+    }
 
-	public void setEditTime(Date editTime) {
-		this.editTime = editTime;
-	}
+    public void setStatus(String status) {
+        this.status = status;
+    }
 
-	public String getRemark() {
-		return remark;
-	}
+    public String getCreator() {
+        return creator;
+    }
 
-	public void setRemark(String remark) {
-		this.remark = remark;
-	}
+    public void setCreator(String creator) {
+        this.creator = creator;
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
+    public String getEditor() {
+        return editor;
+    }
+
+    public void setEditor(String editor) {
+        this.editor = editor;
+    }
+
+    public Date getEditTime() {
+        return editTime;
+    }
+
+    public void setEditTime(Date editTime) {
+        this.editTime = editTime;
+    }
+
+    public String getRemark() {
+        return remark;
+    }
+
+    public void setRemark(String remark) {
+        this.remark = remark;
+    }
 
 }

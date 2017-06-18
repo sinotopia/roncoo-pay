@@ -24,9 +24,9 @@ import com.sinotopia.pay.user.enums.FundInfoTypeEnum;
 
 /**
  * 用户支付配置实体类
- * 龙果学院：www.sinotopia.com
+ * www.sinotopia.com
  *
- * @author：zenghao
+ * @author：sinotopia
  */
 public class RpUserPayConfig extends BaseEntity implements Serializable {
 

@@ -27,18 +27,31 @@ import java.util.Map;
  * @company：广州领课网络科技有限公司（龙果学院 www.sinotopia.com）.
  */
 public class PageBean<T> implements Serializable {
+
     /**
      *
      */
     private static final long serialVersionUID = 8470697978259453214L;
 
-    // 指定的或是页面参数
-    private int currentPage; // 当前页
-    private int pageSize; // 每页显示多少条
+    /**
+     * 指定的或是页面参数 当前页s
+     */
+    private int currentPage;
+    /**
+     * 每页显示多少条
+     */
+    private int pageSize;
 
     // 查询数据库
-    private int totalCount; // 总记录数
-    private List<T> recordList = new ArrayList<T>(0); // 本页的数据列表
+    /**
+     * 总记录数
+     */
+    private int totalCount;
+
+    /**
+     * 本页的数据列表
+     */
+    private List<T> recordList = new ArrayList<T>(0);
 
     // 计算
     private int totalPage; // 总页数

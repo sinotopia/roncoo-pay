@@ -35,7 +35,9 @@ public class EncryptUtil {
 
     private static final Log LOG = LogFactory.getLog(EncryptUtil.class);
 
-    // 密码盐
+    /**
+     * 密码盐
+     */
     public static final String PWDSALT = "PAY";
 
     /**

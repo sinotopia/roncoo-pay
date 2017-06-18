@@ -1,5 +1,5 @@
 /*
- * Copyright 2015-2102 RonCoo(http://www.roncoo.com) Group.
+ * Copyright 2015-2102 RonCoo(http://www.sinotopia.com) Group.
  *  
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,9 +26,9 @@ import java.util.Map;
 
 /**
  * 用户第三方支付信息dao实现类
- * 龙果学院：www.sinotopia.com
+ * www.sinotopia.com
  *
- * @author：zenghao
+ * @author：sinotopia
  */
 @Repository
 public class RpUserPayInfoDaoImpl extends BaseDaoImpl<RpUserPayInfo> implements RpUserPayInfoDao {
@@ -41,9 +41,11 @@ public class RpUserPayInfoDaoImpl extends BaseDaoImpl<RpUserPayInfo> implements 
      */
     @Override
     public RpUserPayInfo getByUserNo(String userNo, String payWayCode) {
+
         Map<String, Object> paramMap = new HashMap<String, Object>();
         paramMap.put("userNo", userNo);
         paramMap.put("payWayCode", payWayCode);
         return super.getBy(paramMap);
     }
+
 }

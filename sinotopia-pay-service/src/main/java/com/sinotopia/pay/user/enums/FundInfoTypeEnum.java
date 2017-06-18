@@ -22,15 +22,18 @@ import java.util.Map;
 
 /**
  * 资金流入类型
- * 龙果学院：www.sinotopia.com
- * @author：Peter
+ * www.sinotopia.com
+ *
+ * @author：sinotopia
  */
 public enum FundInfoTypeEnum {
 
-	 PLAT_RECEIVES("平台收款"),
-	 MERCHANT_RECEIVES("商家收款");
+    PLAT_RECEIVES("平台收款"),
+    MERCHANT_RECEIVES("商家收款");
 
-    /** 描述 */
+    /**
+     * 描述
+     */
     private String desc;
 
     private FundInfoTypeEnum(String desc) {
@@ -57,7 +60,7 @@ public enum FundInfoTypeEnum {
         return enumMap;
     }
 
-    @SuppressWarnings({ "rawtypes", "unchecked" })
+    @SuppressWarnings({"rawtypes", "unchecked"})
     public static List toList() {
         FundInfoTypeEnum[] ary = FundInfoTypeEnum.values();
         List list = new ArrayList();

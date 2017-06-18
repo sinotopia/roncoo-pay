@@ -1,5 +1,5 @@
 /*
- * Copyright 2015-2102 RonCoo(http://www.roncoo.com) Group.
+ * Copyright 2015-2102 RonCoo(http://www.sinotopia.com) Group.
  *  
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,12 +21,13 @@ import com.sinotopia.pay.common.core.entity.BaseEntity;
 
 /**
  * 支付方式实体类
- * 龙果学院：www.roncoo.com
+ * www.sinotopia.com
  *
- * @author：zenghao
+ * @author：sinotopia
  */
 public class RpPayWay extends BaseEntity implements Serializable {
 
+    private static final long serialVersionUID = 1L;
 
     private String payWayCode;
 
@@ -41,9 +42,6 @@ public class RpPayWay extends BaseEntity implements Serializable {
     private Integer sorts;
 
     private Double payRate;
-
-    private static final long serialVersionUID = 1L;
-
 
     public String getPayWayCode() {
         return payWayCode;

@@ -22,11 +22,13 @@ import com.sinotopia.pay.common.core.entity.BaseEntity;
 
 /**
  * 账户信息
- * 龙果学院：www.roncoo.com
+ * www.sinotopia.com
  *
- * @author：zenghao
+ * @author：sinotopia
  */
 public class RpAccount extends BaseEntity implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     /**
      * 账户编号
@@ -83,9 +85,10 @@ public class RpAccount extends BaseEntity implements Serializable {
      **/
     private String userNo;
 
-    private static final long serialVersionUID = 1L;
+    /**
+     *用户名称
+     */
 
-    /************************* just show ************************************/
     private String userName;
 
     /************************* just show ************************************/

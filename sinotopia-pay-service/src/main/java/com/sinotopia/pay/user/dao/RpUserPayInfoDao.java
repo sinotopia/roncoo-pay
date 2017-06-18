@@ -20,9 +20,9 @@ import com.sinotopia.pay.user.entity.RpUserPayInfo;
 
 /**
  * 用户第三方支付信息dao
- * 龙果学院：www.sinotopia.com
+ * www.sinotopia.com
  *
- * @author：zenghao
+ * @author：sinotopia
  */
 public interface RpUserPayInfoDao extends BaseDao<RpUserPayInfo> {
 

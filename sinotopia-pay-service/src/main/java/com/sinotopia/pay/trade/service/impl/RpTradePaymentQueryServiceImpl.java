@@ -81,7 +81,7 @@ public class RpTradePaymentQueryServiceImpl implements RpTradePaymentQueryServic
 
 		RpUserPayConfig rpUserPayConfig = rpUserPayConfigService.getByPayKey(payKey);
 		if (rpUserPayConfig == null) {
-			throw new UserBizException(UserBizException.USER_PAY_CONFIG_ERRPR, "用户支付配置有误");
+			throw new UserBizException(UserBizException.USER_PAY_CONFIG_ERROR, "用户支付配置有误");
 		}
 
 		String merchantNo = rpUserPayConfig.getUserNo();// 商户编号
@@ -106,7 +106,7 @@ public class RpTradePaymentQueryServiceImpl implements RpTradePaymentQueryServic
 
 		RpUserPayConfig rpUserPayConfig = rpUserPayConfigService.getByUserNo(rpTradePaymentRecord.getMerchantNo());
 		if (rpUserPayConfig == null){
-			throw new UserBizException(UserBizException.USER_PAY_CONFIG_ERRPR,"用户支付配置有误");
+			throw new UserBizException(UserBizException.USER_PAY_CONFIG_ERROR,"用户支付配置有误");
 		}
 
 		Map<String , Object> paramMap = new HashMap<>();

@@ -15,14 +15,13 @@
  */
 package com.sinotopia.pay.common.core.entity;
 
-import com.alibaba.fastjson.JSONObject;
-
 import java.util.ArrayList;
 
 /**
  * API请求,返回分页数据时,统一实体类,将返回的数据统一封装到该实体中,返回给客户端
- * 龙果学院：www.roncoo.com
- * @author zenghao
+ * 龙果学院：www.sinotopia.com
+ *
+ * @author sinotopia
  */
 public class ApiPageListResultVo {
 
@@ -32,14 +31,14 @@ public class ApiPageListResultVo {
     private int code;
 
     /**
-     *  返回描述
+     * 返回描述
      */
     private String msg = "";
 
     /**
-     *  返回分页数据,默认为0页0条
+     * 返回分页数据,默认为0页0条
      */
-    private PageListVO data = new PageListVO(0,0,0,new ArrayList<rpObject>());
+    private PageListVO data = new PageListVO(0, 0, 0, new ArrayList<rpObject>());
 
     public void setCode(int code) {
         this.code = code;
@@ -63,21 +62,6 @@ public class ApiPageListResultVo {
 
     public PageListVO getData() {
         return data;
-    }
-
-
-
-    public static  void main(String [] args ){
-
-        ApiPageListResultVo apiPageListResultVo = new ApiPageListResultVo();
-        apiPageListResultVo.setCode(-1);
-        apiPageListResultVo.setMsg("测试数据");
-
-        PageListVO pageListVO = new PageListVO(0,2,33,new ArrayList<Object>());
-
-        apiPageListResultVo.setData(pageListVO);
-
-        System.out.println(JSONObject.toJSONString(apiPageListResultVo));
     }
 
 }

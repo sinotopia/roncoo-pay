@@ -22,9 +22,9 @@ import java.util.Map;
 
 /**
  * 证件类型
- * 龙果学院：www.sinotopia.com
+ * www.sinotopia.com
  *
- * @author：zenghao
+ * @author：sinotopia
  */
 public enum CardTypeEnum {
 

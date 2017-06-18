@@ -18,7 +18,6 @@
     </properties>
 
     <dependencies>
-
         <dependency>
             <groupId>com.sinotopia.pay.common</groupId>
             <artifactId>sinotopia-pay-common-core</artifactId>

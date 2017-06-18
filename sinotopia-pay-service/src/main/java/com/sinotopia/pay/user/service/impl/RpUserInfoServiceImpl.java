@@ -1,5 +1,5 @@
 /*
- * Copyright 2015-2102 RonCoo(http://www.roncoo.com) Group.
+ * Copyright 2015-2102 RonCoo(http://www.sinotopia.com) Group.
  *  
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -39,9 +39,9 @@ import com.sinotopia.pay.user.entity.RpUserInfo;
 
 /**
  * 用户信息service实现类
- * 龙果学院：www.sinotopia.com
+ * www.sinotopia.com
  *
- * @author：zenghao
+ * @author：sinotopia
  */
 @Service("rpUserInfoService")
 public class RpUserInfoServiceImpl implements RpUserInfoService {
@@ -132,7 +132,7 @@ public class RpUserInfoServiceImpl implements RpUserInfoService {
      * @return
      */
     @Override
-    public RpUserInfo getDataByMerchentNo(String merchantNo) {
+    public RpUserInfo getDataByMerchantNo(String merchantNo) {
         Map<String, Object> paramMap = new HashMap<String, Object>();
         paramMap.put("userNo", merchantNo);
         paramMap.put("status", PublicStatusEnum.ACTIVE.name());

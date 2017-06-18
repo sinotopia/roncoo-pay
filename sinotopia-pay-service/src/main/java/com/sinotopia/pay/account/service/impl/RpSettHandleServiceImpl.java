@@ -125,7 +125,7 @@ public class RpSettHandleServiceImpl implements RpSettHandleService {
 	 */
 	public void launchSett(String userNo, BigDecimal settAmount){
 		RpAccount account = rpAccountQueryService.getAccountByUserNo(userNo);
-		RpUserInfo userInfo = rpUserInfoService.getDataByMerchentNo(userNo);
+		RpUserInfo userInfo = rpUserInfoService.getDataByMerchantNo(userNo);
 		RpUserBankAccount rpUserBankAccount = rpUserBankAccountService.getByUserNo(userNo);
 		BigDecimal availableAmount = account.getAvailableSettAmount();
 		if (settAmount.compareTo(availableAmount) > 0) {
@@ -192,7 +192,7 @@ public class RpSettHandleServiceImpl implements RpSettHandleService {
 	 * @param userNo
 	 */
 	public void launchAutoSett(String userNo){
-		RpUserInfo userInfo = rpUserInfoService.getDataByMerchentNo(userNo);
+		RpUserInfo userInfo = rpUserInfoService.getDataByMerchantNo(userNo);
 		RpAccount account = rpAccountQueryService.getAccountByUserNo(userNo);
 		BigDecimal settAmount = account.getAvailableSettAmount();
 		String settMinAmount = AccountConfigUtil.readConfig("sett_min_amount");

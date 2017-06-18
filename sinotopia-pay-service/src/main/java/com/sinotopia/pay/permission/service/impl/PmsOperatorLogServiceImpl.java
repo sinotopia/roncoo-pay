@@ -1,10 +1,10 @@
 /*
- * Copyright 2015-2102 RonCoo(http://www.roncoo.com) Group.
+ * Copyright 2015-2102 RonCoo(http://www.sinotopia.com) Group.
  *  
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- *  
+ *
  *      http://www.apache.org/licenses/LICENSE-2.0
  *  
  * Unless required by applicable law or agreed to in writing, software
@@ -29,52 +29,55 @@ import com.sinotopia.pay.permission.service.PmsOperatorLogService;
 
 /**
  * 操作员service接口实现
+ * <p>
+ * www.sinotopia.com
  *
- * 龙果学院：www.roncoo.com
- * 
- * @author：shenjialong
+ * @author：sinotopia
  */
 @Service("pmsOperatorLogService")
 public class PmsOperatorLogServiceImpl implements PmsOperatorLogService {
-	@Autowired
-	private PmsOperatorLogDao pmsOperatorLogDao;
+    @Autowired
+    private PmsOperatorLogDao pmsOperatorLogDao;
 
-	/**
-	 * 创建pmsOperator
-	 */
-	public void saveData(PmsOperatorLog pmsOperatorLog) {
-		pmsOperatorLogDao.insert(pmsOperatorLog);
-	}
+    /**
+     * 创建pmsOperator
+     */
+    @Override
+    public void saveData(PmsOperatorLog pmsOperatorLog) {
+        pmsOperatorLogDao.insert(pmsOperatorLog);
+    }
 
-	/**
-	 * 修改pmsOperator
-	 */
-	public void updateData(PmsOperatorLog pmsOperatorLog) {
-		pmsOperatorLogDao.update(pmsOperatorLog);
-	}
+    /**
+     * 修改pmsOperator
+     */
+    @Override
+    public void updateData(PmsOperatorLog pmsOperatorLog) {
+        pmsOperatorLogDao.update(pmsOperatorLog);
+    }
 
-	/**
-	 * 根据id获取数据pmsOperator
-	 * 
-	 * @param id
-	 * @return
-	 */
-	public PmsOperatorLog getDataById(Long id) {
-		return pmsOperatorLogDao.getById(id);
+    /**
+     * 根据id获取数据pmsOperator
+     *
+     * @param id
+     * @return
+     */
+    @Override
+    public PmsOperatorLog getDataById(Long id) {
+        return pmsOperatorLogDao.getById(id);
 
-	}
+    }
 
-	/**
-	 * 分页查询pmsOperator
-	 * 
-	 * @param pageParam
-	 * @param ActivityVo
-	 *            PmsOperator
-	 * @return
-	 */
-	public PageBean listPage(PageParam pageParam, PmsOperatorLog pmsOperatorLog) {
-		Map<String, Object> paramMap = new HashMap<String, Object>();
-		return pmsOperatorLogDao.listPage(pageParam, paramMap);
-	}
+    /**
+     * 分页查询pmsOperator
+     *
+     * @param pageParam
+     * @param ActivityVo PmsOperator
+     * @return
+     */
+    @Override
+    public PageBean listPage(PageParam pageParam, PmsOperatorLog pmsOperatorLog) {
+        Map<String, Object> paramMap = new HashMap<String, Object>();
+        return pmsOperatorLogDao.listPage(pageParam, paramMap);
+    }
 
 }

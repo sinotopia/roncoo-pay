@@ -36,7 +36,7 @@ import com.sinotopia.pay.common.core.pagination.PageParam;
 /**
  * 据访问层基础支撑类.
  *
- * @company：广州领课网络科技有限公司（龙果学院 www.roncoo.com）.
+ * @company：广州领课网络科技有限公司（龙果学院 www.sinotopia.com）.
  */
 public abstract class BaseDaoImpl<T extends BaseEntity> extends SqlSessionDaoSupport implements BaseDao<T> {
 

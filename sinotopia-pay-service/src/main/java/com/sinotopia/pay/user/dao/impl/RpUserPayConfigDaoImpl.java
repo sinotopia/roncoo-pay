@@ -1,5 +1,5 @@
 /*
- * Copyright 2015-2102 RonCoo(http://www.roncoo.com) Group.
+ * Copyright 2015-2102 RonCoo(http://www.sinotopia.com) Group.
  *  
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -27,12 +27,13 @@ import com.sinotopia.pay.user.dao.RpUserPayConfigDao;
 
 /**
  * 用户支付配置dao实现类
- * 龙果学院：www.sinotopia.com
+ * www.sinotopia.com
  *
- * @author：zenghao
+ * @author：sinotopia
  */
 @Repository
 public class RpUserPayConfigDaoImpl extends BaseDaoImpl<RpUserPayConfig> implements RpUserPayConfigDao {
+
     @Override
     public RpUserPayConfig getByUserNo(String userNo, String auditStatus) {
         Map<String, Object> paramMap = new HashMap<String, Object>();
@@ -41,4 +42,5 @@ public class RpUserPayConfigDaoImpl extends BaseDaoImpl<RpUserPayConfig> impleme
         paramMap.put("auditStatus", auditStatus);
         return super.getBy(paramMap);
     }
+
 }

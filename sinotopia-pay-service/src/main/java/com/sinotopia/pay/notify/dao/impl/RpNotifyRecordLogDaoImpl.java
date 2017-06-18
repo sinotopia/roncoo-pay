@@ -10,11 +10,12 @@ import org.springframework.stereotype.Repository;
  * @功能说明:
  * @创建者: Peter
  * @创建时间: 16/6/2  下午2:32
- * @公司名称:广州市领课网络科技有限公司 龙果学院(www.roncoo.com)
+ * @公司名称: www.sinotopia.com
  * @版本:V1.0
  */
 @Repository("rpNotifyRecordLogDao")
 public class RpNotifyRecordLogDaoImpl extends BaseDaoImpl<RpNotifyRecordLog> implements RpNotifyRecordLogDao {
+
     @Override
     public int deleteByPrimaryKey(String id) {
         return 0;

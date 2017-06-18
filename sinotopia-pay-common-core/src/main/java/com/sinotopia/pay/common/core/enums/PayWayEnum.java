@@ -24,7 +24,7 @@ import java.util.Map;
  * 支付方式枚举
  *
  * @author Along.shen
- * @company：广州领课网络科技有限公司（龙果学院 www.roncoo.com）.
+ * @company：广州领课网络科技有限公司（龙果学院 www.sinotopia.com）.
  */
 public enum PayWayEnum {
 

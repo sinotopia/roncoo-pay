@@ -1,5 +1,5 @@
 /*
- * Copyright 2015-2102 RonCoo(http://www.roncoo.com) Group.
+ * Copyright 2015-2102 RonCoo(http://www.sinotopia.com) Group.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -27,79 +27,78 @@ import com.sinotopia.pay.trade.vo.PaymentOrderQueryParam;
 
 /**
  * <b>功能说明:交易模块查询接口</b>
- * @author  Peter
- * <a href="http://www.roncoo.com">龙果学院(www.roncoo.com)</a>
+ *
+ * @author sinotopia
+ *         <a href="http://www.sinotopia.com">www.sinotopia.com</a>
  */
 public interface RpTradePaymentQueryService {
 
+    /**
+     * 根据参数查询交易记录List
+     *
+     * @param paremMap
+     * @return
+     */
+    List<RpTradePaymentRecord> listPaymentRecord(Map<String, Object> paremMap);
+
+    /**
+     * 根据商户支付KEY 及商户订单号 查询支付结果
+     *
+     * @param payKey  商户支付KEY
+     * @param orderNo 商户订单号
+     * @return
+     */
+    OrderPayResultVo getPayResult(String payKey, String orderNo);
+
+    /**
+     * 根据银行订单号查询支付记录
+     *
+     * @param bankOrderNo
+     * @return
+     */
+    RpTradePaymentRecord getRecordByBankOrderNo(String bankOrderNo);
+
+    /**
+     * 根据支付流水号查询支付记录
+     *
+     * @param trxNo
+     * @return
+     */
+    RpTradePaymentRecord getRecordByTrxNo(String trxNo);
 
 
-	/**
-	 * 根据参数查询交易记录List
-	 * 
-	 * @param paremMap
-	 * @return
-	 */
-	public List<RpTradePaymentRecord> listPaymentRecord(Map<String, Object> paremMap);
+    /**
+     * 分页查询支付订单
+     *
+     * @param pageParam
+     * @param paymentOrderQueryParam
+     * @return
+     */
+    PageBean<RpTradePaymentOrder> listPaymentOrderPage(PageParam pageParam, PaymentOrderQueryParam paymentOrderQueryParam);
 
-	/**
-	 * 根据商户支付KEY 及商户订单号 查询支付结果
-	 * 
-	 * @param payKey
-	 *            商户支付KEY
-	 * @param orderNo
-	 *            商户订单号
-	 * @return
-	 */
-	public OrderPayResultVo getPayResult(String payKey, String orderNo);
+    /**
+     * 分页查询支付记录
+     *
+     * @param pageParam
+     * @param paymentOrderQueryParam
+     * @return
+     */
+    PageBean<RpTradePaymentRecord> listPaymentRecordPage(PageParam pageParam, PaymentOrderQueryParam paymentOrderQueryParam);
 
-	/**
-	 * 根据银行订单号查询支付记录
-	 * 
-	 * @param bankOrderNo
-	 * @return
-	 */
-	public RpTradePaymentRecord getRecordByBankOrderNo(String bankOrderNo);
+    /**
+     * 获取交易流水报表
+     *
+     * @param merchantNo
+     * @return
+     */
+    List<Map<String, String>> getPaymentReport(String merchantNo);
 
-	/**
-	 * 根据支付流水号查询支付记录
-	 * 
-	 * @param trxNo
-	 * @return
-	 */
-	public RpTradePaymentRecord getRecordByTrxNo(String trxNo);
-
-
-	/**
-	 * 分页查询支付订单
-	 * @param pageParam
-	 * @param paymentOrderQueryParam
-	 * @return
-	 */
-	public PageBean<RpTradePaymentOrder> listPaymentOrderPage(PageParam pageParam ,PaymentOrderQueryParam paymentOrderQueryParam);
-
-	/**
-	 * 分页查询支付记录
-	 * @param pageParam
-	 * @param paymentOrderQueryParam
-	 * @return
-	 */
-	public PageBean<RpTradePaymentRecord> listPaymentRecordPage(PageParam pageParam ,PaymentOrderQueryParam paymentOrderQueryParam);
-	
-	/**
-	 * 获取交易流水报表
-	 * 
-	 * @param merchantNo
-	 * @return
-	 */
-	public List<Map<String, String>> getPaymentReport(String merchantNo);
-	
-	/**
-	 * 获取交易方式报表
-	 * 
-	 * @param merchantNo
-	 * @return
-	 */
-	public List<Map<String, String>> getPayWayReport(String merchantNo);
+    /**
+     * 获取交易方式报表
+     *
+     * @param merchantNo
+     * @return
+     */
+    List<Map<String, String>> getPayWayReport(String merchantNo);
 
 }

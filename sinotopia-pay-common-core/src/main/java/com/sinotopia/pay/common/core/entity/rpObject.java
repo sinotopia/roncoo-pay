@@ -18,8 +18,9 @@ package com.sinotopia.pay.common.core.entity;
 import java.io.Serializable;
 
 /**
- * 龙果学院：www.roncoo.com
+ * 龙果学院：www.sinotopia.com
+ *
  * @author zenghao
  */
-public class rpObject  extends Object implements Serializable {
+public class rpObject extends Object implements Serializable {
 }

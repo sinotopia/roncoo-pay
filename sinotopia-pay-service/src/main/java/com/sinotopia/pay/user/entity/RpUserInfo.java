@@ -22,23 +22,39 @@ import com.sinotopia.pay.common.core.enums.PublicStatusEnum;
 
 /**
  * 用户信息
- * 龙果学院：www.sinotopia.com
+ * www.sinotopia.com
  *
- * @author：zenghao
+ * @author：sinotopia
  */
 public class RpUserInfo extends BaseEntity implements Serializable {
 
-    private String userNo;
-
-    private String userName;
-
-    private String accountNo;
-
     private static final long serialVersionUID = 1L;
 
+    /**
+     * 用户编号
+     */
+    private String userNo;
+
+    /**
+     * 用户名
+     */
+    private String userName;
+
+    /**
+     * 账号
+     */
+    private String accountNo;
+
+    /**
+     * 手机号
+     */
     private String mobile;
 
+    /**
+     * 登录密码
+     */
     private String password;
+
     /**
      * 支付密码
      */

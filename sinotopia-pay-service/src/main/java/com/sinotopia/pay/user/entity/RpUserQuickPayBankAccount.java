@@ -9,8 +9,8 @@ import com.sinotopia.pay.common.core.utils.StringUtil;
  * 类修改者：<br/>
  * 修改日期：<br/>
  * 修改说明：<br/>
- * 公司名称：广州市领课科技有限公司 <br/>
- * 作者：shenjialong <br/>
+ * 公司名称： <br/>
+ * 作者：sinotopia <br/>
  * 创建时间：2016年12月27日 <br/>
  * 版本：V1.0 <br/>
  */
@@ -32,7 +32,7 @@ public class RpUserQuickPayBankAccount extends BaseEntity {
     private String areas;
 
     /**
-     * 银行卡开户名eg：张三
+     * 银行卡开户名
      **/
     private String bankAccountName;
 

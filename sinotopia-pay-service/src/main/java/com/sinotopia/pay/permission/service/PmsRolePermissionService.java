@@ -1,5 +1,5 @@
 /*
- * Copyright 2015-2102 RonCoo(http://www.roncoo.com) Group.
+ * Copyright 2015-2102 RonCoo(http://www.sinotopia.com) Group.
  *  
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,51 +23,50 @@ import com.sinotopia.pay.permission.entity.PmsRolePermission;
 
 /**
  * 角色权限service接口
+ * <p>
+ * www.sinotopia.com
  *
- * 龙果学院：www.roncoo.com
- * 
  * @author：shenjialong
  */
 public interface PmsRolePermissionService {
 
-	/**
-	 * 根据操作员ID，获取所有的功能权限集
-	 * 
-	 * @param operatorId
-	 */
-	public Set<String> getPermissionsByOperatorId(Long operatorId);
+    /**
+     * 根据操作员ID，获取所有的功能权限集
+     *
+     * @param operatorId
+     */
+    Set<String> getPermissionsByOperatorId(Long operatorId);
 
-	/**
-	 * 创建pmsRolePermission
-	 */
-	void saveData(PmsRolePermission pmsRolePermission);
+    /**
+     * 创建pmsRolePermission
+     */
+    void saveData(PmsRolePermission pmsRolePermission);
 
-	/**
-	 * 修改pmsRolePermission
-	 */
-	void updateData(PmsRolePermission pmsRolePermission);
+    /**
+     * 修改pmsRolePermission
+     */
+    void updateData(PmsRolePermission pmsRolePermission);
 
-	/**
-	 * 根据id获取数据pmsRolePermission
-	 * 
-	 * @param id
-	 * @return
-	 */
-	PmsRolePermission getDataById(Long id);
+    /**
+     * 根据id获取数据pmsRolePermission
+     *
+     * @param id
+     * @return
+     */
+    PmsRolePermission getDataById(Long id);
 
-	/**
-	 * 分页查询pmsRolePermission
-	 * 
-	 * @param pageParam
-	 * @param ActivityVo
-	 *            PmsRolePermission
-	 * @return
-	 */
-	PageBean listPage(PageParam pageParam, PmsRolePermission pmsRolePermission);
-	
-	/**
-	 * 保存角色和权限之间的关联关系
-	 */
-	void saveRolePermission(Long roleId, String rolePermissionStr);
+    /**
+     * 分页查询pmsRolePermission
+     *
+     * @param pageParam
+     * @param ActivityVo PmsRolePermission
+     * @return
+     */
+    PageBean listPage(PageParam pageParam, PmsRolePermission pmsRolePermission);
+
+    /**
+     * 保存角色和权限之间的关联关系
+     */
+    void saveRolePermission(Long roleId, String rolePermissionStr);
 
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright 2015-2102 RonCoo(http://www.roncoo.com) Group.
+ * Copyright 2015-2102 RonCoo(http://www.sinotopia.com) Group.
  *  
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,84 +23,83 @@ import com.sinotopia.pay.permission.entity.PmsPermission;
 
 /**
  * 权限service接口
+ * <p>
+ * www.sinotopia.com
  *
- * 龙果学院：www.roncoo.com
- * 
- * @author：shenjialong
+ * @author：sinotopia
  */
 public interface PmsPermissionService {
 
-	/**
-	 * 创建pmsPermission
-	 */
-	void saveData(PmsPermission pmsPermission);
+    /**
+     * 创建pmsPermission
+     */
+    void saveData(PmsPermission pmsPermission);
 
-	/**
-	 * 修改pmsPermission
-	 */
-	void updateData(PmsPermission pmsPermission);
+    /**
+     * 修改pmsPermission
+     */
+    void updateData(PmsPermission pmsPermission);
 
-	/**
-	 * 根据id获取数据pmsPermission
-	 * 
-	 * @param id
-	 * @return
-	 */
-	PmsPermission getDataById(Long id);
+    /**
+     * 根据id获取数据pmsPermission
+     *
+     * @param id
+     * @return
+     */
+    PmsPermission getDataById(Long id);
 
-	/**
-	 * 分页查询pmsPermission
-	 * 
-	 * @param pageParam
-	 * @param ActivityVo
-	 *            PmsPermission
-	 * @return
-	 */
-	PageBean listPage(PageParam pageParam, PmsPermission pmsPermission);
+    /**
+     * 分页查询pmsPermission
+     *
+     * @param pageParam
+     * @param ActivityVo PmsPermission
+     * @return
+     */
+    PageBean listPage(PageParam pageParam, PmsPermission pmsPermission);
 
-	/**
-	 * 检查权限名称是否已存在
-	 * 
-	 * @param permissionName
-	 * @return
-	 */
-	PmsPermission getByPermissionName(String permissionName);
+    /**
+     * 检查权限名称是否已存在
+     *
+     * @param permissionName
+     * @return
+     */
+    PmsPermission getByPermissionName(String permissionName);
 
-	/**
-	 * 检查权限是否已存在
-	 * 
-	 * @param permission
-	 * @return
-	 */
-	PmsPermission getByPermission(String permission);
+    /**
+     * 检查权限是否已存在
+     *
+     * @param permission
+     * @return
+     */
+    PmsPermission getByPermission(String permission);
 
-	/**
-	 * 检查权限名称是否已存在(其他id)
-	 * 
-	 * @param permissionName
-	 * @param id
-	 * @return
-	 */
-	PmsPermission getByPermissionNameNotEqId(String permissionName, Long id);
+    /**
+     * 检查权限名称是否已存在(其他id)
+     *
+     * @param permissionName
+     * @param id
+     * @return
+     */
+    PmsPermission getByPermissionNameNotEqId(String permissionName, Long id);
 
-	/**
-	 * 删除
-	 * 
-	 * @param permissionId
-	 */
-	void delete(Long permissionId);
+    /**
+     * 删除
+     *
+     * @param permissionId
+     */
+    void delete(Long permissionId);
 
-	/**
-	 * 根据角色查找角色对应的功能权限ID集
-	 * 
-	 * @param roleId
-	 * @return
-	 */
-	String getPermissionIdsByRoleId(Long roleId);
-	
-	/**
-	 * 查询所有的权限
-	 */
-	List<PmsPermission> listAll();
+    /**
+     * 根据角色查找角色对应的功能权限ID集
+     *
+     * @param roleId
+     * @return
+     */
+    String getPermissionIdsByRoleId(Long roleId);
+
+    /**
+     * 查询所有的权限
+     */
+    List<PmsPermission> listAll();
 
 }

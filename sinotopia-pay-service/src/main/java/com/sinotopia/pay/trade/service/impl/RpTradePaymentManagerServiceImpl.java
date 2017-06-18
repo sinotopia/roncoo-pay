@@ -156,7 +156,7 @@ public class RpTradePaymentManagerServiceImpl implements RpTradePaymentManagerSe
 
 		RpUserPayConfig rpUserPayConfig = rpUserPayConfigService.getByPayKey(payKey);
 		if (rpUserPayConfig == null) {
-			throw new UserBizException(UserBizException.USER_PAY_CONFIG_ERRPR, "用户支付配置有误");
+			throw new UserBizException(UserBizException.USER_PAY_CONFIG_ERROR, "用户支付配置有误");
 		}
 
 		// 根据支付产品及支付方式获取费率
@@ -171,12 +171,12 @@ public class RpTradePaymentManagerServiceImpl implements RpTradePaymentManagerSe
 		}
 
 		if (payWay == null) {
-			throw new UserBizException(UserBizException.USER_PAY_CONFIG_ERRPR, "用户支付配置有误");
+			throw new UserBizException(UserBizException.USER_PAY_CONFIG_ERROR, "用户支付配置有误");
 		}
 
 		String merchantNo = rpUserPayConfig.getUserNo();// 商户编号
 
-		RpUserInfo rpUserInfo = rpUserInfoService.getDataByMerchentNo(merchantNo);
+		RpUserInfo rpUserInfo = rpUserInfoService.getDataByMerchantNo(merchantNo);
 		if (rpUserInfo == null) {
 			throw new UserBizException(UserBizException.USER_IS_NULL, "用户不存在");
 		}
@@ -240,7 +240,7 @@ public class RpTradePaymentManagerServiceImpl implements RpTradePaymentManagerSe
 
 		RpUserPayConfig rpUserPayConfig = rpUserPayConfigService.getByPayKey(payKey);
 		if (rpUserPayConfig == null) {
-			throw new UserBizException(UserBizException.USER_PAY_CONFIG_ERRPR, "用户支付配置有误");
+			throw new UserBizException(UserBizException.USER_PAY_CONFIG_ERROR, "用户支付配置有误");
 		}
 
 		if (StringUtil.isEmpty(authCode)) {
@@ -260,11 +260,11 @@ public class RpTradePaymentManagerServiceImpl implements RpTradePaymentManagerSe
 		}
 
 		if (payWay == null) {
-			throw new UserBizException(UserBizException.USER_PAY_CONFIG_ERRPR, "用户支付配置有误");
+			throw new UserBizException(UserBizException.USER_PAY_CONFIG_ERROR, "用户支付配置有误");
 		}
 
 		String merchantNo = rpUserPayConfig.getUserNo();// 商户编号
-		RpUserInfo rpUserInfo = rpUserInfoService.getDataByMerchentNo(merchantNo);
+		RpUserInfo rpUserInfo = rpUserInfoService.getDataByMerchantNo(merchantNo);
 		if (rpUserInfo == null) {
 			throw new UserBizException(UserBizException.USER_IS_NULL, "用户不存在");
 		}
@@ -323,7 +323,7 @@ public class RpTradePaymentManagerServiceImpl implements RpTradePaymentManagerSe
 
 				RpUserPayInfo rpUserPayInfo = rpUserPayInfoService.getByUserNo(rpTradePaymentOrder.getMerchantNo(), payWayCode);
 				if (rpUserPayInfo == null) {
-					throw new UserBizException(UserBizException.USER_PAY_CONFIG_ERRPR, "商户支付配置有误");
+					throw new UserBizException(UserBizException.USER_PAY_CONFIG_ERROR, "商户支付配置有误");
 				}
 
 				aliF2FPaySubmit.initConfigs(rpTradePaymentOrder.getFundIntoType(), rpUserPayInfo.getOfflineAppId(), rpUserPayInfo.getAppId(), rpUserPayInfo.getRsaPrivateKey(), rpUserPayInfo.getRsaPublicKey());
@@ -421,7 +421,7 @@ public class RpTradePaymentManagerServiceImpl implements RpTradePaymentManagerSe
 
 		RpUserPayConfig rpUserPayConfig = rpUserPayConfigService.getByUserNo(rpTradePaymentRecord.getMerchantNo());
 		if (rpUserPayConfig == null) {
-			throw new UserBizException(UserBizException.USER_PAY_CONFIG_ERRPR, "用户支付配置有误");
+			throw new UserBizException(UserBizException.USER_PAY_CONFIG_ERROR, "用户支付配置有误");
 		}
 
 		Map<String, Object> paramMap = new HashMap<>();
@@ -528,18 +528,18 @@ public class RpTradePaymentManagerServiceImpl implements RpTradePaymentManagerSe
 
 		RpUserPayConfig rpUserPayConfig = rpUserPayConfigService.getByPayKey(payKey);
 		if (rpUserPayConfig == null) {
-			throw new UserBizException(UserBizException.USER_PAY_CONFIG_ERRPR, "用户支付配置有误");
+			throw new UserBizException(UserBizException.USER_PAY_CONFIG_ERROR, "用户支付配置有误");
 		}
 
 		String merchantNo = rpUserPayConfig.getUserNo();// 商户编号
-		RpUserInfo rpUserInfo = rpUserInfoService.getDataByMerchentNo(merchantNo);
+		RpUserInfo rpUserInfo = rpUserInfoService.getDataByMerchantNo(merchantNo);
 		if (rpUserInfo == null) {
 			throw new UserBizException(UserBizException.USER_IS_NULL, "用户不存在");
 		}
 
 		List<RpPayWay> payWayList = rpPayWayService.listByProductCode(rpUserPayConfig.getProductCode());
 		if (payWayList == null || payWayList.size() <= 0) {
-			throw new UserBizException(UserBizException.USER_PAY_CONFIG_ERRPR, "支付产品配置有误");
+			throw new UserBizException(UserBizException.USER_PAY_CONFIG_ERROR, "支付产品配置有误");
 		}
 
 		RpTradePaymentOrder rpTradePaymentOrder = rpTradePaymentOrderDao.selectByMerchantNoAndMerchantOrderNo(merchantNo, orderNo);
@@ -589,7 +589,7 @@ public class RpTradePaymentManagerServiceImpl implements RpTradePaymentManagerSe
 
 		RpUserPayConfig rpUserPayConfig = rpUserPayConfigService.getByPayKey(payKey);
 		if (rpUserPayConfig == null) {
-			throw new UserBizException(UserBizException.USER_PAY_CONFIG_ERRPR, "用户支付配置有误");
+			throw new UserBizException(UserBizException.USER_PAY_CONFIG_ERROR, "用户支付配置有误");
 		}
 
 		// 根据支付产品及支付方式获取费率
@@ -601,11 +601,11 @@ public class RpTradePaymentManagerServiceImpl implements RpTradePaymentManagerSe
 		}
 
 		if (payWay == null) {
-			throw new UserBizException(UserBizException.USER_PAY_CONFIG_ERRPR, "用户支付配置有误");
+			throw new UserBizException(UserBizException.USER_PAY_CONFIG_ERROR, "用户支付配置有误");
 		}
 
 		String merchantNo = rpUserPayConfig.getUserNo();// 商户编号
-		RpUserInfo rpUserInfo = rpUserInfoService.getDataByMerchentNo(merchantNo);
+		RpUserInfo rpUserInfo = rpUserInfoService.getDataByMerchantNo(merchantNo);
 		if (rpUserInfo == null) {
 			throw new UserBizException(UserBizException.USER_IS_NULL, "用户不存在");
 		}
@@ -766,12 +766,12 @@ public class RpTradePaymentManagerServiceImpl implements RpTradePaymentManagerSe
 
 			RpUserPayConfig rpUserPayConfig = rpUserPayConfigService.getByUserNo(merchantNo);
 			if (rpUserPayConfig == null) {
-				throw new UserBizException(UserBizException.USER_PAY_CONFIG_ERRPR, "用户支付配置有误");
+				throw new UserBizException(UserBizException.USER_PAY_CONFIG_ERROR, "用户支付配置有误");
 			}
 			// 根据支付产品及支付方式获取费率
 			RpPayWay payWay = rpPayWayService.getByPayWayTypeCode(rpUserPayConfig.getProductCode(), rpTradePaymentRecord.getPayWayCode(), rpTradePaymentRecord.getPayTypeCode());
 			if (payWay == null) {
-				throw new UserBizException(UserBizException.USER_PAY_CONFIG_ERRPR, "用户支付配置有误");
+				throw new UserBizException(UserBizException.USER_PAY_CONFIG_ERROR, "用户支付配置有误");
 			}
 		}
 

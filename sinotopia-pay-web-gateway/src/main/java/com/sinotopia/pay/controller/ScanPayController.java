@@ -132,7 +132,7 @@ public class ScanPayController extends BaseController {
 
         RpUserPayConfig rpUserPayConfig = rpUserPayConfigService.getByPayKey(payKey);
         if (rpUserPayConfig == null) {
-            throw new UserBizException(UserBizException.USER_PAY_CONFIG_ERRPR, "用户支付配置有误");
+            throw new UserBizException(UserBizException.USER_PAY_CONFIG_ERROR, "用户支付配置有误");
         }
 
         cnpPayService.checkIp(rpUserPayConfig, httpServletRequest);//ip校验

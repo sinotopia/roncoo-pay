@@ -20,7 +20,7 @@ import com.sinotopia.pay.user.entity.RpUserBankAccount;
 
 /**
  * 用户银行账户dao
- * 龙果学院：www.sinotopia.com
+ * swww.sinotopia.com
  *
  * @author：zenghao
  */

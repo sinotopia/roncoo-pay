@@ -1,5 +1,5 @@
 /*
- * Copyright 2015-2102 RonCoo(http://www.roncoo.com) Group.
+ * Copyright 2015-2102 RonCoo(http://www.sinotopia.com) Group.
  *  
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -32,9 +32,9 @@ import com.sinotopia.pay.user.service.BuildNoService;
 
 /**
  * 生成编号service实现类,每个编号前面都会有一个前缀用来方便区分是那种编号
- * 龙果学院：www.sinotopia.com
+ * www.sinotopia.com
  *
- * @author：zenghao
+ * @author：sinotopia
  */
 @Service("buildNoService")
 public class BuildNoServiceImpl implements BuildNoService {
@@ -50,6 +50,7 @@ public class BuildNoServiceImpl implements BuildNoService {
      * 银行订单号
      **/
     private static final String BANK_ORDER_NO_PREFIX = "6666";
+
     /**
      * 支付流水号前缀
      **/

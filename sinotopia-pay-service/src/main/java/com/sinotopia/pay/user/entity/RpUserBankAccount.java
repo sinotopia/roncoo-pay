@@ -19,9 +19,9 @@ import com.sinotopia.pay.common.core.entity.BaseEntity;
 
 /**
  * 用户银行卡信息
- * 龙果学院：www.roncoo.com
+ * www.sinotopia.com
  *
- * @author：zenghao
+ * @author：sinotopia
  */
 public class RpUserBankAccount extends BaseEntity {
 

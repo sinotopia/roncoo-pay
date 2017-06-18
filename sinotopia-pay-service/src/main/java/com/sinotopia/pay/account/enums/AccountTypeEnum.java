@@ -22,69 +22,72 @@ import java.util.Map;
 
 /**
  * 账户类型
- * 龙果学院：www.roncoo.com
+ * www.sinotopia.com
+ *
  * @author：zenghao
  */
 public enum AccountTypeEnum {
 
-	/**
-	 * 用户
-	 */
-	USER("用户"),
-	/**
-	 * 企业
-	 */
-	ENTERPRISE("企业");
+    /**
+     * 用户
+     */
+    USER("用户"),
+    /**
+     * 企业
+     */
+    ENTERPRISE("企业");
 
-	/** 描述 */
-	private String desc;
+    /**
+     * 描述
+     */
+    private String desc;
 
-	private AccountTypeEnum(String desc) {
-		this.desc = desc;
-	}
+    private AccountTypeEnum(String desc) {
+        this.desc = desc;
+    }
 
-	public String getDesc() {
-		return desc;
-	}
+    public String getDesc() {
+        return desc;
+    }
 
-	public void setDesc(String desc) {
-		this.desc = desc;
-	}
-	
-	public static AccountTypeEnum getEnum(String enumName) {
-		AccountTypeEnum resultEnum = null;
-		AccountTypeEnum[] enumAry = AccountTypeEnum.values();
-		for (int i = 0; i < enumAry.length; i++) {
-			if (enumAry[i].name().equals(enumName)) {
-				resultEnum = enumAry[i];
-				break;
-			}
-		}
-		return resultEnum;
-	}
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
 
-	public static Map<String, Map<String, Object>> toMap() {
-		AccountTypeEnum[] ary = AccountTypeEnum.values();
-		Map<String, Map<String, Object>> enumMap = new HashMap<String, Map<String, Object>>();
-		for (int num = 0; num < ary.length; num++) {
-			Map<String, Object> map = new HashMap<String, Object>();
-			String key = ary[num].name();
-			map.put("desc", ary[num].getDesc());
-			enumMap.put(key, map);
-		}
-		return enumMap;
-	}
+    public static AccountTypeEnum getEnum(String enumName) {
+        AccountTypeEnum resultEnum = null;
+        AccountTypeEnum[] enumAry = AccountTypeEnum.values();
+        for (int i = 0; i < enumAry.length; i++) {
+            if (enumAry[i].name().equals(enumName)) {
+                resultEnum = enumAry[i];
+                break;
+            }
+        }
+        return resultEnum;
+    }
 
-	@SuppressWarnings({ "rawtypes", "unchecked" })
-	public static List toList() {
-		AccountTypeEnum[] ary = AccountTypeEnum.values();
-		List list = new ArrayList();
-		for (int i = 0; i < ary.length; i++) {
-			Map<String, String> map = new HashMap<String, String>();
-			map.put("desc", ary[i].getDesc());
-			list.add(map);
-		}
-		return list;
-	}
+    public static Map<String, Map<String, Object>> toMap() {
+        AccountTypeEnum[] ary = AccountTypeEnum.values();
+        Map<String, Map<String, Object>> enumMap = new HashMap<String, Map<String, Object>>();
+        for (int num = 0; num < ary.length; num++) {
+            Map<String, Object> map = new HashMap<String, Object>();
+            String key = ary[num].name();
+            map.put("desc", ary[num].getDesc());
+            enumMap.put(key, map);
+        }
+        return enumMap;
+    }
+
+    @SuppressWarnings({"rawtypes", "unchecked"})
+    public static List toList() {
+        AccountTypeEnum[] ary = AccountTypeEnum.values();
+        List list = new ArrayList();
+        for (int i = 0; i < ary.length; i++) {
+            Map<String, String> map = new HashMap<String, String>();
+            map.put("desc", ary[i].getDesc());
+            list.add(map);
+        }
+        return list;
+    }
 
 }

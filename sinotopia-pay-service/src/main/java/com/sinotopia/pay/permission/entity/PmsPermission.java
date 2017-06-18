@@ -1,5 +1,5 @@
 /*
- * Copyright 2015-2102 RonCoo(http://www.roncoo.com) Group.
+ * Copyright 2015-2102 RonCoo(http://www.sinotopia.com) Group.
  *  
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,52 +17,60 @@
 package com.sinotopia.pay.permission.entity;
 
 /**
- * 权限-权限表实体..
- * 
- * 龙果学院：www.roncoo.com
- * 
- * @author：shenjialong
+ * 权限-权限表实体
+ * <p>
+ * www.sinotopia.com
+ *
+ * @author：sinotopia
  */
 public class PmsPermission extends PermissionBaseEntity {
 
-	private static final long serialVersionUID = -2175597348886393330L;
-	private String permissionName; // 权限名称
-	private String permission; // 权限标识
+    private static final long serialVersionUID = -2175597348886393330L;
 
-	/**
-	 * 权限名称
-	 * 
-	 * @return
-	 */
-	public String getPermissionName() {
-		return permissionName;
-	}
+    /**
+     * 权限名称
+     */
+    private String permissionName;
 
-	/**
-	 * 权限名称
-	 * 
-	 * @return
-	 */
-	public void setPermissionName(String permissionName) {
-		this.permissionName = permissionName;
-	}
+    /**
+     * 权限标识
+     */
+    private String permission;
 
-	/**
-	 * 权限标识
-	 * 
-	 * @return
-	 */
-	public String getPermission() {
-		return permission;
-	}
+    /**
+     * 权限名称
+     *
+     * @return
+     */
+    public String getPermissionName() {
+        return permissionName;
+    }
 
-	/**
-	 * 权限标识
-	 * 
-	 * @return
-	 */
-	public void setPermission(String permission) {
-		this.permission = permission;
-	}
+    /**
+     * 权限名称
+     *
+     * @return
+     */
+    public void setPermissionName(String permissionName) {
+        this.permissionName = permissionName;
+    }
+
+    /**
+     * 权限标识
+     *
+     * @return
+     */
+    public String getPermission() {
+        return permission;
+    }
+
+    /**
+     * 权限标识
+     *
+     * @return
+     */
+    public void setPermission(String permission) {
+        this.permission = permission;
+    }
 
 }

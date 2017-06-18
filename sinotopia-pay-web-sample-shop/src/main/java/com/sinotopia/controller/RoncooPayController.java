@@ -1,5 +1,5 @@
 /*
- * Copyright 2015-2102 RonCoo(http://www.roncoo.com) Group.
+ * Copyright 2015-2102 RonCoo(http://www.sinotopia.com) Group.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,8 +15,8 @@
  */
 package com.sinotopia.controller;
 
-import com.roncoo.utils.MerchantApiUtil;
-import com.roncoo.utils.PayConfigUtil;
+import com.sinotopia.utils.MerchantApiUtil;
+import com.sinotopia.utils.PayConfigUtil;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -33,7 +33,7 @@ import java.util.Map;
  * </b>
  *
  * @author Peter
- *         <a href="http://www.sinotopia.com">龙果学院(www.sinotopia.com)</a>
+ *         <a href="http://www.sinotopia.com">www.sinotopia.com</a>
  */
 @Controller
 @RequestMapping(value = "/roncooPay")

@@ -29,9 +29,9 @@ import com.sinotopia.pay.user.service.RpUserPayInfoService;
 
 /**
  * 用户第三方支付信息service实现类
- * 龙果学院：www.sinotopia.com
+ * www.sinotopia.com
  *
- * @author：zenghao
+ * @author：sinotopia
  */
 @Service("rpUserPayInfoService")
 public class RpUserPayInfoServiceImpl implements RpUserPayInfoService {

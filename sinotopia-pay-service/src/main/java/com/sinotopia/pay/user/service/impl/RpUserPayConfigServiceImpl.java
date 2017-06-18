@@ -1,5 +1,5 @@
 /*
- * Copyright 2015-2102 RonCoo(http://www.roncoo.com) Group.
+ * Copyright 2015-2102 RonCoo(http://www.sinotopia.com) Group.
  *  
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -43,7 +43,7 @@ import com.sinotopia.pay.user.service.RpUserPayInfoService;
 
 /**
  * 用户支付配置service实现类
- * 龙果学院：www.sinotopia.com
+ * www.sinotopia.com
  *
  * @author：zenghao
  */
@@ -52,10 +52,13 @@ public class RpUserPayConfigServiceImpl implements RpUserPayConfigService {
 
     @Autowired
     private RpUserPayConfigDao rpUserPayConfigDao;
+
     @Autowired
     private RpPayProductService rpPayProductService;
+
     @Autowired
     private RpPayWayService rpPayWayService;
+
     @Autowired
     private RpUserPayInfoService rpUserPayInfoService;
 

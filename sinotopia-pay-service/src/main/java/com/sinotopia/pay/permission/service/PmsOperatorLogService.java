@@ -1,5 +1,5 @@
 /*
- * Copyright 2015-2102 RonCoo(http://www.roncoo.com) Group.
+ * Copyright 2015-2102 RonCoo(http://www.sinotopia.com) Group.
  *  
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,39 +21,38 @@ import com.sinotopia.pay.permission.entity.PmsOperatorLog;
 
 /**
  * 操作员日志service接口
+ * <p>
+ * www.sinotopia.com
  *
- * 龙果学院：www.roncoo.com
- * 
- * @author：shenjialong
+ * @author：sinotopia
  */
 public interface PmsOperatorLogService {
 
-	/**
-	 * 创建pmsOperatorLog
-	 */
-	void saveData(PmsOperatorLog pmsOperatorLog);
+    /**
+     * 创建pmsOperatorLog
+     */
+    void saveData(PmsOperatorLog pmsOperatorLog);
 
-	/**
-	 * 修改pmsOperatorLog
-	 */
-	void updateData(PmsOperatorLog pmsOperatorLog);
+    /**
+     * 修改pmsOperatorLog
+     */
+    void updateData(PmsOperatorLog pmsOperatorLog);
 
-	/**
-	 * 根据id获取数据pmsOperatorLog
-	 * 
-	 * @param id
-	 * @return
-	 */
-	PmsOperatorLog getDataById(Long id);
+    /**
+     * 根据id获取数据pmsOperatorLog
+     *
+     * @param id
+     * @return
+     */
+    PmsOperatorLog getDataById(Long id);
 
-	/**
-	 * 分页查询pmsOperatorLog
-	 * 
-	 * @param pageParam
-	 * @param ActivityVo
-	 *            PmsOperatorLog
-	 * @return
-	 */
-	PageBean listPage(PageParam pageParam, PmsOperatorLog pmsOperatorLog);
+    /**
+     * 分页查询pmsOperatorLog
+     *
+     * @param pageParam
+     * @param ActivityVo PmsOperatorLog
+     * @return
+     */
+    PageBean listPage(PageParam pageParam, PmsOperatorLog pmsOperatorLog);
 
 }

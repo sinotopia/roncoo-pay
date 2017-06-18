@@ -1,5 +1,5 @@
 /*
- * Copyright 2015-2102 RonCoo(http://www.roncoo.com) Group.
+ * Copyright 2015-2102 RonCoo(http://www.sinotopia.com) Group.
  *  
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,29 +17,32 @@ package com.sinotopia.pay.permission.service;
 
 /**
  * 菜单角色service接口
+ * <p>
+ * www.sinotopia.com
  *
- * 龙果学院：www.roncoo.com
- * 
- * @author：shenjialong
+ * @author：sinotopia
  */
 public interface PmsMenuRoleService {
 
-	/**
-	 * 根据角色ID统计关联到此角色的菜单数.
-	 * 
-	 * @param roleId
-	 *            角色ID.
-	 * @return count.
-	 */
-	public int countMenuByRoleId(Long roleId);
+    /**
+     * 根据角色ID统计关联到此角色的菜单数.
+     *
+     * @param roleId 角色ID.
+     * @return count.
+     */
+    int countMenuByRoleId(Long roleId);
 
-	/**
-	 * 根据角色id，删除该角色关联的所有菜单权限
-	 * 
-	 * @param roleId
-	 */
-	public void deleteByRoleId(Long roleId);
+    /**
+     * 根据角色id，删除该角色关联的所有菜单权限
+     *
+     * @param roleId
+     */
+    void deleteByRoleId(Long roleId);
 
-	public void saveRoleMenu(Long roleId, String roleMenuStr);
+    /**
+     * @param roleId
+     * @param roleMenuStr
+     */
+    void saveRoleMenu(Long roleId, String roleMenuStr);
 
 }

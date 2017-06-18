@@ -1,5 +1,5 @@
 /*
- * Copyright 2015-2102 RonCoo(http://www.roncoo.com) Group.
+ * Copyright 2015-2102 RonCoo(http://www.sinotopia.com) Group.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.roncoo.controller;
+package com.sinotopia.controller;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -41,7 +41,7 @@ import java.util.Set;
  * </b>
  *
  * @author Peter
- *         <a href="http://www.sinotopia.com">龙果学院(www.sinotopia.com)</a>
+ *         <a href="http://www.sinotopia.com">www.sinotopia.com</a>
  */
 public abstract class BaseController {
 
@@ -113,7 +113,6 @@ public abstract class BaseController {
         }
         return parameters;
     }
-
 
     public int getInt(String name) {
         return getInt(name, 0);

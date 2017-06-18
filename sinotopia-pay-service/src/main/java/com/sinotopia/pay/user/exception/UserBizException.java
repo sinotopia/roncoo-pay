@@ -1,5 +1,5 @@
 /*
- * Copyright 2015-2102 RonCoo(http://www.roncoo.com) Group.
+ * Copyright 2015-2102 RonCoo(http://www.sinotopia.com) Group.
  *  
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,9 +22,9 @@ import com.sinotopia.pay.common.core.exception.BizException;
 
 /**
  * 用户业务异常类
- * 龙果学院：www.sinotopia.com
+ * www.sinotopia.com
  *
- * @author：Peter
+ * @author：sinotopia
  */
 public class UserBizException extends BizException {
 
@@ -41,7 +41,7 @@ public class UserBizException extends BizException {
     /**
      * 用户支付配置有误
      **/
-    public static final int USER_PAY_CONFIG_ERRPR = 102;
+    public static final int USER_PAY_CONFIG_ERROR = 102;
 
     public static final UserBizException USER_BANK_ACCOUNT_IS_NULL = new UserBizException(10010002, "用户未设置银行账户信息!");
 

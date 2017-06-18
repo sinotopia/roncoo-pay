@@ -178,7 +178,7 @@ public class PmsOperatorServiceImpl implements PmsOperatorService {
 					PmsOperatorRole pmsOperatorRole = new PmsOperatorRole();
 					pmsOperatorRole.setOperatorId(pmsOperator.getId());
 					pmsOperatorRole.setRoleId(roleId);
-					pmsOperatorRole.setCreater(pmsOperator.getCreater());
+					pmsOperatorRole.setCreator(pmsOperator.getCreator());
 					pmsOperatorRole.setCreateTime(new Date());
 					pmsOperatorRole.setStatus(PublicStatusEnum.ACTIVE.name());
 					pmsOperatorRoleDao.insert(pmsOperatorRole);

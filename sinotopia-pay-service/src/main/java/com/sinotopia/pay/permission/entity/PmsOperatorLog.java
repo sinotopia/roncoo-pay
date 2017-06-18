@@ -1,5 +1,5 @@
 /*
- * Copyright 2015-2102 RonCoo(http://www.roncoo.com) Group.
+ * Copyright 2015-2102 RonCoo(http://www.sinotopia.com) Group.
  *  
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,60 +16,79 @@
 package com.sinotopia.pay.permission.entity;
 
 /**
- * 权限管理-操作员操作日志..
+ * 权限管理-操作员操作日志
+ * <p>
+ * www.sinotopia.com
  *
- * 龙果学院：www.roncoo.com
- * 
- * @author：shenjialong
+ * @author：sinotopia
  */
 public class PmsOperatorLog extends PermissionBaseEntity {
 
-	private static final long serialVersionUID = 742891253537618199L;
+    private static final long serialVersionUID = 742891253537618199L;
 
-	private Long operatorId; // 操作员ID
-	private String operatorName; // 操作员登录名
-	private String operateType; // 操作类型（参与枚举:OperatorLogTypeEnum,1:增加,2:修改,3:删除,4:查询,5:登录）
-	private String ip; // IP地址
-	private String content; // 操作内容
+    /**
+     * 操作员ID
+     */
+    private Long operatorId;
 
-	public Long getOperatorId() {
-		return operatorId;
-	}
+    /**
+     * 操作员登录名
+     */
+    private String operatorName;
 
-	public void setOperatorId(Long operatorId) {
-		this.operatorId = operatorId;
-	}
+    /**
+     * 操作类型（参与枚举:OperatorLogTypeEnum,1:增加,2:修改,3:删除,4:查询,5:登录）
+     */
+    private String operateType;
 
-	public String getOperatorName() {
-		return operatorName;
-	}
+    /**
+     * IP地址
+     */
+    private String ip;
 
-	public void setOperatorName(String operatorName) {
-		this.operatorName = operatorName;
-	}
+    /**
+     * 操作内容
+     */
+    private String content;
 
-	public String getOperateType() {
-		return operateType;
-	}
+    public Long getOperatorId() {
+        return operatorId;
+    }
 
-	public void setOperateType(String operateType) {
-		this.operateType = operateType;
-	}
+    public void setOperatorId(Long operatorId) {
+        this.operatorId = operatorId;
+    }
 
-	public String getIp() {
-		return ip;
-	}
+    public String getOperatorName() {
+        return operatorName;
+    }
 
-	public void setIp(String ip) {
-		this.ip = ip;
-	}
+    public void setOperatorName(String operatorName) {
+        this.operatorName = operatorName;
+    }
 
-	public String getContent() {
-		return content;
-	}
+    public String getOperateType() {
+        return operateType;
+    }
 
-	public void setContent(String content) {
-		this.content = content;
-	}
+    public void setOperateType(String operateType) {
+        this.operateType = operateType;
+    }
+
+    public String getIp() {
+        return ip;
+    }
+
+    public void setIp(String ip) {
+        this.ip = ip;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
 
 }
